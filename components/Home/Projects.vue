@@ -12,7 +12,7 @@ function onPreviewClick(project: Project) {
 </script>
 
 <template>
-  <section id='projects' class='min-h-screen'>
+  <section id='projects' class='min-h-screen mb-20'>
     <hr class="my-6 border-white/20" fade-scroll />
     <div class="text-2xl mb-4" fade-scroll>Projects</div>
     <!--  TODO:: new feature  -->
