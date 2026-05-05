@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         "@vueuse/nuxt",
         "@nuxt/image",
         "@nuxtjs/google-fonts"
-    ],
+    ], 
     colorMode: {
         preference: "light",
         fallback: "light",
