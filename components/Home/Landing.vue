@@ -10,23 +10,20 @@ const BACKEND_TECH = "NodeJS"
       </h1>
       <h2 once-in
           class="text-3xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-pink-600 inline-block text-transparent bg-clip-text mb-6 leading-tight">
-        Software Engineer
+        Software Engineer (Flutter Developer)
       </h2>
       <div class="flex flex-wrap gap-4 justify-center mb-8" once-in>
         <a href="https://github.com/osos2511" target="_blank"
            class="px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white text-md sm:text-xl transition">GitHub</a>
         <a href="https://www.linkedin.com/in/osama-mohamed1/" target="_blank"
-           class="px-4 py-2 md:px-6 md:py-3  rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] text-lg sm:text-xl transition">LinkedIn</a>
+           class="px-4 py-2 md:px-6 md:py-3 rounded-full bg-[#0A66C2] text-white hover:bg-[#004182] text-lg sm:text-xl transition">LinkedIn</a>
         <a href="mailto:osamamohamed.developer@gmail.com"
-           class="px-4 py-2 md:px-6 md:py-3  rounded-full bg-gray-800 hover:bg-gray-700 text-white text-lg sm:text-xl transition">Mail</a>
+           class="px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white text-lg sm:text-xl transition">Mail</a>
       </div>
-<p once-in class="text-base sm:text-xl lg:text-2xl text-gray-400 max-w-2xl leading-relaxed">
-  I build high-performance and beautiful mobile applications with
-  <UBadge size="lg" color="blue" label="Flutter" icon="logos:flutter" />
-  and web development with
-  <UBadge size="lg" color="blue" label="React" icon="logos:react" />
-  .
-</p>
+      <p once-in class="text-base sm:text-xl lg:text-2xl text-gray-400 max-w-2xl leading-relaxed">
+        I build high-performance and beautiful mobile applications with
+        <UBadge size="lg" color="blue" label="Flutter" icon="logos:flutter" />.
+      </p>
     </div>
   </section>
 </template>
