@@ -59,6 +59,41 @@ export const CONTACT: Contact[] = [
 
 
 export const PROJECTS: Project[] = [
+
+  {
+    title: "Sifsaf App",
+    type: "AgriTech App",
+    grid: "xx-large",
+    techs: [
+      {
+        icon: "logos:flutter",
+        title: "Flutter"
+      },
+      {
+        icon: "logos:dart",
+        title: "Dart"
+      },
+      // ضيف هنا الـ State Management اللي استخدمته، مثلاً:
+      {
+        icon: "logos:bloc", // أو provider
+        title: "Cubit"
+      },
+      // لو شغال بـ Firebase ضيف دي:
+      {
+        icon: "logos:firebase",
+        title: "Firebase"
+      },
+      // لو شغال بـ API ضيف دي:
+      {
+        icon: "carbon:api",
+        title: "Rest API"
+      }
+    ],
+    src: "sifsaf", 
+    link: "https://play.google.com/store/apps/details?id=com.safsaf.app&hl=ar", 
+},
+
+
   {
     title: "Tayarko App",
     type: "Delivery App",
@@ -120,36 +155,6 @@ export const PROJECTS: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.devguardx.ahmohandes",
 },
 
-
-{
-    title: "Magnet Web App",
-    type: "Store Web App",
-    grid: "xx-large",
-    techs: [
-      {
-        icon: "logos:react",
-        title: "React"
-      },
-      {
-        icon: "bxl:typescript",
-        title: "TypeScript"
-      },
-      {
-        icon: "logos:redux",
-        title: "Redux"
-      },
-      {
-        icon: "logos:redux-toolkit", 
-        title: "RTK Query"
-      },
-      {
-        icon: "carbon:api",
-        title: "Rest API"
-      }
-    ],
-    src: "magnet",
-    link: "https://magnet-web-omega.vercel.app/",
-},
 
 
 
