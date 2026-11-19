@@ -1,319 +1,202 @@
 export interface IBase {
-  title: string,
-  icon: string
+  title: string;
+  icon: string;
 }
 
 export interface Contact extends IBase {
-  link: string,
-  isMail?: boolean
+  link: string;
+  isMail?: boolean;
 }
 
-export interface Stack extends IBase {
-}
+export interface Stack extends IBase {}
 
-export interface Tool extends IBase {
-}
+export interface Tool extends IBase {}
 
 export type Icons =
-  'mdi:nuxt'
+  | 'mdi:nuxt'
   | 'bxl:typescript'
   | 'mdi:tailwind'
   | 'carbon:api'
   | 'devicon-plain:vuetify'
   | 'mdi:vuejs'
   | 'ri:bootstrap-fill'
-  | 'file-icons:nuxt' |
-  "logos:vue"
-  | "devicon:spring"
-  | "logos:nodejs-icon"
+  | 'file-icons:nuxt'
+  | 'logos:vue'
+  | 'devicon:spring'
+  | 'logos:nodejs-icon'
   | 'logos:flutter'
   | 'logos:dart'
   | 'logos:firebase'
-  | 'logos:bloc' // تأكد من المسمى الصحيح في Iconify
-  | 'logos:google-maps' // إذا كنت تستخدم الخرائط
+  | 'logos:bloc'
+  | 'logos:google-maps'
   | 'logos:react'
   | 'logos:redux'
   | 'logos:redux-toolkit'
+  | 'logos:python'
+  | 'mdi:database'
+  | 'logos:linux-tux'
+  | 'logos:git'
+  | 'logos:javascript'
+  | 'flowbite:css-solid'
+  | 'flowbite:html-solid'
+  | 'logos:github-actions'
+  | 'material-icon-theme:cursor'
+  | 'logos:ubuntu'
+  | 'mdi:microsoft-visual-studio-code'
+  | 'mdi:android-studio'
+  | 'logos:mysql'
+  | 'logos:postman'
+  | 'arcticons:openai-chatgpt'
+  | 'solar:figma-broken'
+  | 'logos:claude';
+
 export interface ITechIcon extends IBase {
-  icon: Icons
+  icon: Icons;
+}
+
+export interface Project {
+  title: string;
+  type: string;
+  grid?: string;
+  techs: ITechIcon[];
+  src: string;
+  link: string;
+  githubLink?: string;
+  tags?: {
+    title: string;
+    color: string;
+  }[];
+  show?: boolean;
+  made_with?: string;
 }
 
 export const CONTACT: Contact[] = [
   {
-    title: "linkedin",
-    icon: "mdi:linkedin",
-    link: "https://www.linkedin.com/in/osama-mohamed1/"
+    title: 'linkedin',
+    icon: 'mdi:linkedin',
+    link: 'https://www.linkedin.com/in/osama-mohamed1/',
   },
   {
-    title: "github",
-    icon: "mdi:github",
-    link: "https://github.com/osos2511"
+    title: 'github',
+    icon: 'mdi:github',
+    link: 'https://github.com/osos2511',
   },
   {
-    title: "mail",
-    icon: "material-symbols-light:mail-outline",
-    link: "mailto:osamamohamed.developer@gmail.com",
+    title: 'mail',
+    icon: 'material-symbols-light:mail-outline',
+    link: 'mailto:osamamohamed.developer@gmail.com',
     isMail: true,
   },
-]
-
+];
 
 export const PROJECTS: Project[] = [
-
   {
-    title: "Sifsaf App",
-    type: "AgriTech App",
-    grid: "xx-large",
+    title: 'Safsaf App',
+    type: 'AgriTech App',
+    grid: 'xx-large',
     techs: [
-      {
-        icon: "logos:flutter",
-        title: "Flutter"
-      },
-      {
-        icon: "logos:dart",
-        title: "Dart"
-      },
-      // ضيف هنا الـ State Management اللي استخدمته، مثلاً:
-      {
-        icon: "logos:bloc", // أو provider
-        title: "Cubit"
-      },
-      // لو شغال بـ Firebase ضيف دي:
-      {
-        icon: "logos:firebase",
-        title: "Firebase"
-      },
-      // لو شغال بـ API ضيف دي:
-      {
-        icon: "carbon:api",
-        title: "Rest API"
-      }
+      { icon: 'logos:flutter', title: 'Flutter' },
+      { icon: 'logos:dart', title: 'Dart' },
+      { icon: 'logos:bloc', title: 'Cubit' },
+      { icon: 'logos:firebase', title: 'Firebase' },
+      { icon: 'carbon:api', title: 'Rest API' },
     ],
-    src: "sifsaf", 
-    link: "https://play.google.com/store/apps/details?id=com.safsaf.app&hl=ar", 
-},
-
-
+    src: 'sifsaf',
+    link: 'https://play.google.com/store/apps/details?id=com.safsaf.app&hl=ar',
+  },
   {
-    title: "Tayarko App",
-    type: "Delivery App",
-    grid: "xx-large",
+    title: 'Tayarko App',
+    type: 'Delivery App',
+    grid: 'xx-large',
     techs: [
-      {
-        icon: "logos:flutter",
-        title: "Flutter"
-      },
-      {
-        icon: "logos:dart",
-        title: "Dart"
-      },
-      // ضيف هنا الـ State Management اللي استخدمته، مثلاً:
-      {
-        icon: "logos:bloc", // أو provider
-        title: "Cubit"
-      },
-      // لو شغال بـ Firebase ضيف دي:
-      {
-        icon: "logos:firebase",
-        title: "Firebase"
-      },
-      // لو شغال بـ API ضيف دي:
-      {
-        icon: "carbon:api",
-        title: "Rest API"
-      }
+      { icon: 'logos:flutter', title: 'Flutter' },
+      { icon: 'logos:dart', title: 'Dart' },
+      { icon: 'logos:bloc', title: 'Cubit' },
+      { icon: 'logos:firebase', title: 'Firebase' },
+      { icon: 'carbon:api', title: 'Rest API' },
     ],
-    src: "Tayarko", 
-    link: "https://play.google.com/store/apps/details?id=com.tayarko.devduardx&pli=1", 
-},
-
-
-
-{
-    title: "AlmohandesLink App",
-    type: "Store App",
-    grid: "xx-large",
+    src: 'Tayarko',
+    link: 'https://play.google.com/store/apps/details?id=com.tayarko.devduardx&pli=1',
+  },
+  {
+    title: 'AlmohandesLink App',
+    type: 'Store App',
+    grid: 'xx-large',
     techs: [
-      {
-        icon: "logos:flutter",
-        title: "Flutter"
-      },
-      {
-        icon: "logos:dart",
-        title: "Dart"
-      },
-      {
-        icon: "logos:bloc", 
-        title: "Cubit"
-      },
-      {
-        icon: "carbon:api",
-        title: "Rest API"
-      }
+      { icon: 'logos:flutter', title: 'Flutter' },
+      { icon: 'logos:dart', title: 'Dart' },
+      { icon: 'logos:bloc', title: 'Cubit' },
+      { icon: 'carbon:api', title: 'Rest API' },
     ],
-    src: "almohandeslink",
-    link: "https://play.google.com/store/apps/details?id=com.devguardx.ahmohandes",
-},
-
-
-
-
-]
-
-
+    src: 'almohandeslink',
+    link: 'https://play.google.com/store/apps/details?id=com.devguardx.ahmohandes',
+  },
+];
 
 export const STACKS: Stack[] = [
-  {
-    title: "Flutter",
-    icon: "logos:flutter"
-  },
-  {
-    title: "Dart",
-    icon: "logos:dart"
-  },
-  {
-    title: "Python",
-    icon: "logos:python"
-  },
-  {
-    title: "SQL",
-    icon: "mdi:database" 
-  },
-  {
-    title: "Linux",
-    icon: "logos:linux-tux"
-  },
-  {
-    title: "git",
-    icon: "logos:git"
-  },
-  {
-    title: "bootstrap",
-    icon: "logos:bootstrap"
-  },
-  {
-    title: "javascript",
-    icon: "logos:javascript"
-  },
-  {
-    title: "CSS",
-    icon: "flowbite:css-solid"
-  },
-  {
-    title: "HTML",
-    icon: "flowbite:html-solid"
-  },
-]
-
-
-
-
+  { title: 'Flutter', icon: 'logos:flutter' },
+  { title: 'Dart', icon: 'logos:dart' },
+  { title: 'Python', icon: 'logos:python' },
+  { title: 'SQL', icon: 'mdi:database' },
+  { title: 'Linux', icon: 'logos:linux-tux' },
+  { title: 'git', icon: 'logos:git' },
+  { title: 'javascript', icon: 'logos:javascript' },
+  { title: 'CSS', icon: 'flowbite:css-solid' },
+  { title: 'HTML', icon: 'flowbite:html-solid' },
+  { title: 'Github Actions', icon: 'logos:github-actions' },
+];
 
 export const TOOLS: Tool[] = [
-  {
-    title: "Cursor",
-    icon: "material-icon-theme:cursor"
-  },
-  {
-    title: "Ubuntu",
-    icon: "logos:ubuntu"
-  },
-  {
-    title: "vscode",
-    icon: "mdi:microsoft-visual-studio-code"
-  },
-  {
-    title: "Android Studio",
-    icon: "mdi:android-studio"
-  },
-  {
-    title: "MySQL",
-    icon: "logos:mysql"
-  },
-  {
-    title: "postman",
-    icon: "logos:postman"
-  },
-  {
-    title: "Chat GPT",
-    icon: "arcticons:openai-chatgpt"
-  },
-  {
-    title: "Figma",
-    icon: "solar:figma-broken"
-  }
-]
+  { title: 'Cursor', icon: 'material-icon-theme:cursor' },
+  { title: 'Ubuntu', icon: 'logos:ubuntu' },
+  { title: 'vscode', icon: 'mdi:microsoft-visual-studio-code' },
+  { title: 'Android Studio', icon: 'mdi:android-studio' },
+  { title: 'MySQL', icon: 'logos:mysql' },
+  { title: 'postman', icon: 'logos:postman' },
+  { title: 'Chat GPT', icon: 'arcticons:openai-chatgpt' },
+  { title: 'Figma', icon: 'solar:figma-broken' },
+  { title: 'Claude Code', icon: 'logos:claude' },
+];
+
 export interface HeaderLink {
-  title: string,
-  icon: string
+  title: string;
+  icon: string;
 }
 
 export const HEADERLINKS: HeaderLink[] = [
-  {
-    title: "profile",
-    icon: 'iconamoon:profile-thin'
-  },
-  // {
-  //   title: "timeline",
-  //   icon: 'material-symbols:timeline'
-  // },
-  {
-    title: "projects",
-    icon: "material-symbols-light:work-outline"
-  },
-  {
-    title: "techs",
-    icon: "hugeicons:nano-technology"
-  },
-  {
-    title: "tools",
-    icon: "et:tools-2"
-  },
-]
+  { title: 'profile', icon: 'iconamoon:profile-thin' },
+  { title: 'projects', icon: 'material-symbols-light:work-outline' },
+  { title: 'techs', icon: 'hugeicons:nano-technology' },
+  { title: 'tools', icon: 'et:tools-2' },
+];
 
 interface TimeLine {
-  date: string,
-  text: string,
-  isLeft?: boolean,
-  avatarUrl?: string,
-  joined?: boolean,
-  icon?: string
+  date: string;
+  text: string;
+  isLeft?: boolean;
+  avatarUrl?: string;
+  joined?: boolean;
+  icon?: string;
 }
 
 export const TIMELINE: TimeLine[] = [
   {
-    date: "Aug 2022",
-    text: "Graduated in Computer Science",
-    icon: "line-md:computer"
+    date: 'Aug 2022',
+    text: 'Graduated in Computer Science',
+    icon: 'line-md:computer',
   },
   {
-    date: "Apr 2024",
+    date: 'Apr 2024',
     text: "joined <a target='_blank' href='https://www.linkedin.com/company/talent-innovate/' style='text-decoration: underline;'>@innovate</a> as a Frontend Developer",
     isLeft: true,
-    joined: true
+    joined: true,
   },
   {
-    date: "Jan 2025 – Present",
+    date: 'Jan 2025 – Present',
     text: "joined <a target='_blank' href='https://www.linkedin.com/company/namasoft' style='text-decoration: underline;'>@namasoft</a> as a Frontend Developer",
     joined: true,
     isLeft: false,
   },
-]
+];
 
-export const DEFAULT_INDICATOR_SIZE = 80
-
-export interface Project {
-  title: string,
-  type: string,
-  grid?: string,
-  techs: ITechIcon[],
-  src: string,
-  link: string,
-  githubLink?: string
-  tags?: {
-    title: string,
-    color: string
-  }[],
-  show?: boolean,
-  made_with?: string
-}
+export const DEFAULT_INDICATOR_SIZE = 80;
