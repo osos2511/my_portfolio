@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 function openPDF() {
- const pdfUrl = '/Osama_Mohamed(Software Engineer).pdf';
+ const pdfUrl = '/Osama_Moh_Resume.pdf';
  window.open(pdfUrl, '_blank', 'width=800,height=600');
 }
 
